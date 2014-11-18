@@ -59,7 +59,7 @@ class header {
 		$sx .= '<link rel="shortcut icon" type="image/x-icon" href="' . $http . 'favicon.ico" />' . $cr;
 
 		/* Add Style File */
-		$style = array('proethos_form.css', 'proethos_style.css', 'proethos_cabmenu_styles.css', 'proethos_style.css', 'proethos_main.css', 'font_roboto.css', 'google_css.css');
+		$style = array('prj_style.css', 'font_roboto.css', 'google_css.css');
 		for ($r = 0; $r < count($style); $r++) { $sx .= '<link rel="STYLESHEET" type="text/css" href="' . $http . 'css/' . $style[$r] . '">' . $cr;
 		}
 
@@ -90,9 +90,16 @@ class header {
 	function cab() {
 		$sx = $this -> head();
 		$sx .= $this -> api_google;
+		$sx .= '<div id="cab">';
+		$sx .= $this->menu_top();
+		$sx .= '</div>';
 		return ($sx);
 	}
 
+	function menu_top()
+		{
+			return('xx');
+		}
 
 	function retornar_para_pagina_principal() {
 		global $cr;

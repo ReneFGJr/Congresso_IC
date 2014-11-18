@@ -4,5 +4,6 @@ require("_class/_class_header.php");
 $hd = new header;
 
 echo $hd->head();
+echo $hd->cab();
 ?>
 
