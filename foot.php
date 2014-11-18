@@ -1,2 +1,3 @@
-    </body>
-</html>
+<?php
+echo $hd->foot();
+?>
