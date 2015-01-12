@@ -35,7 +35,8 @@ class header {
 		$sx = '';
 		$sx .= '<div id="foot">';
 		$sx .= '&copy; '.date("Y").'- sisDOC ';
-		$sx .= '<div id="foot">';
+		$sx .= '</div>';
+		$sx .= '</head>';
 		return ($sx);
 	}
 
@@ -82,7 +83,6 @@ class header {
 		}
 
 		$sx .= '<title>' . $this -> title . '</title>' . $cr;
-		$sx .= '</head>';
 
 		return ($sx);
 	}
