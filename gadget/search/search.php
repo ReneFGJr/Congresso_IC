@@ -1,5 +1,28 @@
 <?php
+$include = '../../../_include/';
+require($include."_class_char.php");
 $file = 'search.txt';
+
+$tm = '"ensino" or "aprendizagem" or "educação"';
+
+/* Phases */
+
+/* Tudo em caixa alta */
+$tm = UpperCaseSql($tm);
+
+/* Remove os enters */
+$tm = troca($tm,chr(13),' ');
+$tm = troca($tm,chr(10),'');
+
+/* Troca &gt; por < e &lt por > */
+$tm = troca($tm,'&quot;','"');
+
+/* Troca os operadores boobleanos */
+$tm = troca($tm," OR ",' [or] ');
+
+/* Identifica os termos */
+echo '<BR>=>'.$tm;
+exit;
 
 // "ensino" or "aprendizagem" or "educação"
 $cn = "\$R = (\$T1 OR \$T2 OR \$T3); ";
