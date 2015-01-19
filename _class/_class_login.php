@@ -1,5 +1,13 @@
 <?php
 class login {
+	var $user_erro = '';
+	var $user_msg  = '';
+	function login()
+		{
+			$this->user_erro = 'ok';
+			$this->user_msg = '';
+			return(1);
+		}
 	
 	function logo($n)
 		{
@@ -23,9 +31,10 @@ class login {
 		$sx .= '<td><img src="' . $this->logo(2) . '"><BR><BR>';
 		$sx .= $cr . $cr;
 
-		$sx .= '<!--- Login form -->';
+		//$sx .= '<!--- Login form -->';
 		$sx .= $cr . $cr;
-
+		$sx .= '<TR><TD>';
+		
 		$sx .= '<div id="loginform">';
 		$sx .= '<div id="facebook"><i class="fa fa-facebook"></i><div id="connect">Connect with</div>';
 		$sx .= '</div>';
@@ -53,21 +62,21 @@ class login {
 		$tela = $form -> editar($cp, '');
 
 		/* Show Form */
-		echo '<center>';
-		echo $tela;
-		echo '</center>';
+		$sx .= '<center>';
+		$sx .= $tela;
+		$sx .= '</center>';
 
 		/* Check login */
 		if ($form -> saved > 0) {
-			$rst = $ss -> login($dd[1], $dd[2]);
+			$rst = $this -> login($dd[1], $dd[2]);
 
-			$rst = $ss -> user_erro;
+			$rst = $this -> user_erro;
 			$msg_erro = 'Erro:' . abs($rst);
 			/* recupera mensagem */
 
 			if ($rst < 0) {
 				$rst = abs($rst);
-				$msg_erro = msg($ss -> user_msg);
+				$msg_erro = $this -> user_msg;
 			} else {
 				if ($rst == 1) {
 					redirecina('main.php');
@@ -77,12 +86,11 @@ class login {
 
 		/* ERRO */
 		if (strlen($msg_erro) > 0) {
-			$erros = '<TR><TD></TD><TD><div id="erro">' . $msg_erro . '</div>';
+			$erros = '<TR><TD><div id="erro">' . $msg_erro . '</div>';
 		}
 
 		$sx .= $cr . $cr;
 
-		$sx .= '<!-- forgot passs or new user -->';
 
 //		$sx .= '
 //			<A href="javascript:newxy2(\'login_password_send.php\',500,200)" class="links"> ' . msg('forgot_password') . '</A>

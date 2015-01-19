@@ -1,7 +1,9 @@
 /* Standard CSS */
 body
     {
+        font-family: 'CICPG', Arial, Tahoma, Verdana;
         margin: 0px;
+        font-size: 12px;
     }
     
 #cab
@@ -20,4 +22,31 @@ body
         bottom:0;                           /* added */
         left:0;                             /* added */  
         text-align: center;   
+    }
+
+h1  
+    {
+        font-family: 'CICPG', Arial, Tahoma, Verdana;
+        font-size: 26px; 
+    }
+h2  
+    {
+        font-family: 'CICPG', Arial, Tahoma, Verdana;
+        font-size: 22px; 
+    }
+h3  
+    {
+        font-family: 'CICPG', Arial, Tahoma, Verdana;
+        font-size: 18px; 
+    }
+h4  
+    {
+        font-family: 'CICPG', Arial, Tahoma, Verdana;
+        font-size: 16px; 
+    }
+    
+/* Tabelas */
+.tabela01  
+    {
+        border: 1px solid #333333;
     }
