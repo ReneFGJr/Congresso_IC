@@ -1,5 +1,5 @@
-				<link rel="stylesheet" href="css/cicpg_normal.css">
-				<link rel="stylesheet" href="css/component.css">
+<link rel="stylesheet" href="css/cicpg_normal.css">
+<link rel="stylesheet" href="css/component.css">
 <?
 /*
  * @Author Rene Faustino Gabriel Junior <renefgj@gmail.com>

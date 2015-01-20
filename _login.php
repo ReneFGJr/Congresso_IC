@@ -1,6 +1,5 @@
 <?php
 require("cab.php");
-require("_class/_class_login.php");
 $l = new login;
 
 require($include.'_class_form.php');

@@ -6,6 +6,20 @@ $hd = new header;
 echo $hd->head();
 echo $hd->cab();
 
+require("_class/_class_login.php");
+$us = new login;
+
+$sc = round($us->security());
+
+$page = page();
+if ($sc != 1)
+	{
+		if (!($page == '_login.php'))
+			{
+				redirecina($http."_login.php");
+			}
+	}
+
 echo '
 <style>
 body
