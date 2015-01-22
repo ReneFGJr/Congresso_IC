@@ -93,20 +93,23 @@ footer a {
     float:left;
     margin:4px 4px;    
 }
-.amarelo{
-    background:#DAA520;
+.fcor00{
+    color: #000000;
+}
+.cor01{
+    background-color:#DAA520;
 }
   
-.vermelho{
-    background:#CD0000; 
+.cor02{
+    background-color:#DAA520; 
 }
   
-.azul{
-    background:#4682B4;
+.cor03{
+    background-color:#DAA520;
 }
   
-.verde{
-    background-color: #2E8B57;
+.cor04{
+    background-color: #DAA520;
 }
 
 .selecionado{
