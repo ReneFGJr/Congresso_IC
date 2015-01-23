@@ -40,7 +40,7 @@ class login {
 		}
 	}
 
-	function login($user, $pass) {
+	function login($user='', $pass='') {
 		global $dd;
 		$user = UpperCaseSQL($user);
 		$pass = UpperCaseSQL($pass);
