@@ -19,3 +19,13 @@ echo '<h1>Login</h1>';
 echo $l->login_form();
 echo '</table>';
 ?>
+
+<style>
+	#content
+		{
+			background: #FEFEFE;
+			border-radius: 10px;
+			height: 330px;
+			width: 1020px;
+		}
+</style>

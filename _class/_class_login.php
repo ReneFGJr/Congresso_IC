@@ -7,6 +7,7 @@ class login {
 	var $user_name = '';
 	var $user_login = '';
 	var $user_session = '';
+	var $user_perfil = 'usuário';
 
 	var $auth = 'FILE';
 
@@ -23,6 +24,27 @@ class login {
 			return (0);
 		}
 	}
+	
+	function show_user() 
+		{
+			global $http;
+			$sx = '<div id="user_show">';
+			if (strlen($this->user_name) == 0)
+				{
+					$sx = '<A HREF="'.$http.'_login.php" class="lt1">';
+					$sx = 'not loged';
+					$sx .= '</A>';					
+				} else {
+					$sx = '
+					<div id="show_user">
+					<div id="show_user_image"></div>
+					<span class="user_name lt2">'.$this->user_name.'</span><BR>
+					<span class="user_perfil"><font class="lt1">'.$this->user_perfil.'</font></span>
+					</div>
+					';
+				}
+			return($sx);
+		}
 
 	function setar_usuario() {
 		$_SESSION['user_name'] = $this -> user_name;
@@ -39,6 +61,15 @@ class login {
 			$ln = array();
 		}
 	}
+	
+	function logout()
+		{
+			$this -> user_name = '';
+			$this -> user_login = '';
+			$this -> user_codigo = '';
+			$this -> user_session = '';
+			$this->setar_usuario();
+		}
 
 	function login($user='', $pass='') {
 		global $dd;
@@ -70,7 +101,7 @@ class login {
 		$cr = chr(13) . chr(10);
 
 		$sx = '<table border=0 align="center"><tr VALIGN="TOP"><td width="300">';
-		$sx .= '<img src="' . $this -> logo(3) . '" width="200" border=0>';
+		//$sx .= '<img src="' . $this -> logo(3) . '" width="200" border=0>';
 		$sx .= $this -> about;
 		$sx .= '<td><img src="' . $this -> logo(2) . '"><BR><BR>';
 		$sx .= $cr . $cr;
@@ -94,7 +125,7 @@ class login {
 		array_push($cp, array('$P20', '', $msg['password'], True, True));
 		array_push($cp, array('$B8', '', $msg['submit'], False, True));
 
-		$dd[1] = email_restrition($dd[1]);
+		//$dd[1] = email_restrition($dd[1]);
 
 		$form = new form;
 		$form -> required_message = 0;

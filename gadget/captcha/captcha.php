@@ -1,5 +1,5 @@
-<?
-session_start();
+<?php
+require("../../db.php");
 $codigoCaptcha = substr(md5(time()), 0, 8);
 $_SESSION['captcha'] = $codigoCaptcha;
 $imagemCaptcha = imagecreatefrompng("img/image_captch.png");

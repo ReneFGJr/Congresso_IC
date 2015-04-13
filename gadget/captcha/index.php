@@ -1,3 +1,6 @@
+<?php
+require("../../cab.php");
+?>
 <!-- No campo src da tag img abaixo enviaremos 4 parametros via GET 
 	l = largura da imagem a = altura da imagem 
 	tf = tamanho fonte das letras 

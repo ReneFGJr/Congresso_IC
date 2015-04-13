@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+require("cab.php");
+?>
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
@@ -16,13 +18,6 @@
 	<body>
 		<div class="container">
 			<!-- Top Navigation -->
-			<div class="codrops-top clearfix">
-				<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Tutorials/WebAudioStylophone/"><span>Previous Demo</span></a>
-				<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=15430"><span>Back to the Codrops Article</span></a></span>
-			</div>
-			<header>
-				<h1>Creative Button Styles <span>Modern and subtle styles &amp; effects for buttons (hover and click)</span></h1>	
-			</header>
 			<section class="color-1">
 				<p class="text note-touch">Note that on mobile devices the effects might not all work as intended.</p>
 				<p>

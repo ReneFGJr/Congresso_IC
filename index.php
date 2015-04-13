@@ -1,7 +1,3 @@
 <?php
-require("cab.php");
-
-/* header */
-
-require("foot.php");
+require("main.php");
 ?>
