@@ -30,6 +30,7 @@ function start() {
     var today = new Date()
     var h = today.getHours()
     var m = today.getMinutes()
+    var s = today.getSeconds()
     //console.log("h: "+h)
     var ampm = get_ampm(h)
 
@@ -38,9 +39,9 @@ function start() {
     h = twelvehour(h)   //changes to 12hr format
 
     //write time to screen
-    document.getElementById('time').innerHTML = h + ":" + m + " " + ampm
+    document.getElementById('time').innerHTML = h + ":" + m + ":" + s +" " + ampm
     //Since we aren't printing seconds, we can wait longer to call the function again
-    var t = setTimeout(start, 2*1000) //every 2 seconds
+    var t = setTimeout(start, 1*1000) //every 2 seconds
 }
 
 var _hide_details = false
@@ -131,10 +132,14 @@ if (!isset($title_system))
     {
         height: 200px;
     }
-        
+.img_login
+    {
+        max-height: 300px;
+    }      
 </style>
 
 <body style="background-color: black;"  onload="start()">
+    <form method="post">
     <div class="container-fluid fcolor borderb hd"  >
         <div class="row">
             <div class="col-md-12 white text-right">
@@ -154,7 +159,7 @@ if (!isset($title_system))
                 <span class="css_login_subtitle">log in</span>
             </div>
             <div class="col-md-5 fcolor">
-                <img src="<?php echo base_url('img/logo_mini.png');?>" class="img-fluid" >
+                <img src="<?php echo base_url('img/logo_mini.png');?>" class="img-fluid img_login" >
             </div>            
         </div>
     </div>
@@ -230,6 +235,7 @@ if (!isset($title_system))
             </div>
         </div>
     </div>
+    </form>
 </body>
 
 <script>
